@@ -71,9 +71,7 @@ function checkGamePage(context, url) {
   const page = await context.newPage();
   const chunkSize = 10;
   const chunks = [];
-  const remainingGames = allGames
-    // .slice(0, 30)
-    .filter((g) => !existingUrls.includes(g));
+  const remainingGames = allGames.filter((g) => !existingUrls.includes(g));
 
   await page.goto("https://poki.com/");
 
@@ -93,16 +91,7 @@ function checkGamePage(context, url) {
 
     result.filter((x) => x).forEach((g) => gameinfos.push(g));
 
-    fs.writeFileSync("gameinfos.json", JSON.stringify(gameinfos, null, 2));
-
-    fs.writeFileSync(
-      "gameinfos_defold.json",
-      JSON.stringify(
-        gameinfos.filter((gi) => gi.defold),
-        null,
-        2
-      )
-    );
+    fs.writeFileSync("src/lib/gameinfos.json", JSON.stringify(gameinfos, null, 2));
   }
 
   await browser.close();
