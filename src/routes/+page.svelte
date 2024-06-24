@@ -52,7 +52,7 @@
   }
 </script>
 
-<h1>Poki Games</h1>
+<h1>Poki Games - Showing {searched.length} of {data.length}</h1>
 
 <div id="options">
   <input id="search" placeholder="search name or author" bind:value={search} />
