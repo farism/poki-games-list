@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.2",
 		"@types/lodash": "^4.17.5",
 		"@types/lodash-es": "^4.17.12",
 		"lodash": "^4.17.21",

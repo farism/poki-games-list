@@ -52,7 +52,7 @@
   }
 </script>
 
-<h1>Poki Games</h1>
+<h1>Poki Games - Showing {searched.length} of {data.length}</h1>
 
 <div id="options">
   <input id="search" placeholder="search name or author" bind:value={search} />
@@ -85,9 +85,8 @@
       Downvotes{#if sort == "downvotes"}<span class="sort">{#if sortDir == "asc"}▲{:else}▼{/if}</span>{/if}
     </th>
     {#if !hideTags}
-      <th>Tags</th>
+      <th width="100%">Tags</th>
     {/if}
-    <th>Link</th>
   </tr>
   {#each searched as { author, defold, downvote, name, tags, upvote, url }, i (url)}
     <tr>
@@ -95,7 +94,9 @@
       <td>
         <input type="checkbox" checked={defold} onclick="return false" />
       </td>
-      <td>{name}</td>
+      <td>
+        <a href="https://poki.com{url}" target="_blank">{name}</a>
+      </td>
       <td>{author}</td>
       <td>{upvote}</td>
       <td>{downvote}</td>
@@ -106,9 +107,6 @@
           </ul>
         </td>
       {/if}
-      <td>
-        <a href="https://poki.com{url}" target="_blank">Play</a>
-      </td>
     </tr>
   {/each}
 </table>
