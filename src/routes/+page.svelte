@@ -87,7 +87,6 @@
     {#if !hideTags}
       <th>Tags</th>
     {/if}
-    <th>Link</th>
   </tr>
   {#each searched as { author, defold, downvote, name, tags, upvote, url }, i (url)}
     <tr>
@@ -95,7 +94,9 @@
       <td>
         <input type="checkbox" checked={defold} onclick="return false" />
       </td>
-      <td>{name}</td>
+      <td>
+        <a href="https://poki.com{url}" target="_blank">{name}</a>
+      </td>
       <td>{author}</td>
       <td>{upvote}</td>
       <td>{downvote}</td>
@@ -106,9 +107,6 @@
           </ul>
         </td>
       {/if}
-      <td>
-        <a href="https://poki.com{url}" target="_blank">Play</a>
-      </td>
     </tr>
   {/each}
 </table>
