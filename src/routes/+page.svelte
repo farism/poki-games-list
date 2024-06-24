@@ -69,20 +69,30 @@
 <table>
   <tr>
     <th>#</th>
-    <th on:click={() => sortBy("defold")}>
-      Defold{#if sort == "defold"}<span class="sort">{#if sortDir == "asc"}▲{:else}▼{/if}</span>{/if}
+    <th class="sortable" on:click={() => sortBy("defold")}>
+      Defold{#if sort == "defold"}<span class="sort"
+          >{#if sortDir == "asc"}▲{:else}▼{/if}</span
+        >{/if}
     </th>
-    <th on:click={() => sortBy("name")}>
-      Name{#if sort == "name"}<span class="sort">{#if sortDir == "asc"}▲{:else}▼{/if}</span>{/if}
+    <th class="sortable" on:click={() => sortBy("name")}>
+      Name{#if sort == "name"}<span class="sort"
+          >{#if sortDir == "asc"}▲{:else}▼{/if}</span
+        >{/if}
     </th>
-    <th on:click={() => sortBy("author")}>
-      Author{#if sort == "author"}<span class="sort">{#if sortDir == "asc"}▲{:else}▼{/if}</span>{/if}
+    <th class="sortable" on:click={() => sortBy("author")}>
+      Author{#if sort == "author"}<span class="sort"
+          >{#if sortDir == "asc"}▲{:else}▼{/if}</span
+        >{/if}
     </th>
-    <th on:click={() => sortBy("upvotes")}>
-      Upvotes{#if sort == "upvotes"}<span class="sort">{#if sortDir == "asc"}▲{:else}▼{/if}</span>{/if}
+    <th class="sortable" on:click={() => sortBy("upvotes")}>
+      Upvotes{#if sort == "upvotes"}<span class="sort"
+          >{#if sortDir == "asc"}▲{:else}▼{/if}</span
+        >{/if}
     </th>
-    <th on:click={() => sortBy("downvotes")}>
-      Downvotes{#if sort == "downvotes"}<span class="sort">{#if sortDir == "asc"}▲{:else}▼{/if}</span>{/if}
+    <th class="sortable" on:click={() => sortBy("downvotes")}>
+      Downvotes{#if sort == "downvotes"}<span class="sort"
+          >{#if sortDir == "asc"}▲{:else}▼{/if}</span
+        >{/if}
     </th>
     {#if !hideTags}
       <th>Tags</th>
@@ -122,16 +132,26 @@
 
   th {
     white-space: nowrap;
+    padding: 5px 5px 15px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid black;
   }
 
-  th,
-  td {
-    text-align: left;
-    padding: 5px;
+  th.sortable {
+    cursor: pointer;
   }
 
   td {
     background: #f1f1f1;
+    text-align: left;
+    padding: 5px;
+  }
+
+  tr:hover td {
+    background: #e9e9e9;
   }
 
   ul {

@@ -1,25 +1,5 @@
 [
   {
-    "url": "/en/g/1010-color-match",
-    "name": "1010 Color Match",
-    "author": "Potato Jam",
-    "tags": [
-      "Brain Games",
-      "Block Games",
-      "Puzzle Games",
-      "Intelligence Games",
-      "Classic Games",
-      "Matching Games",
-      "New Games",
-      "Color Games",
-      "Mobile Games",
-      "Easy Games"
-    ],
-    "upvote": "28.8K",
-    "downvote": "12.4K",
-    "defold": true
-  },
-  {
     "url": "/en/g/blocky-puzzle",
     "name": "Blocky Puzzle",
     "author": "OPlay Games",
@@ -869,26 +849,6 @@
     "defold": true
   },
   {
-    "url": "/en/g/numbers",
-    "name": "Numbers",
-    "author": "Potato Jam",
-    "tags": [
-      "Brain Games",
-      "Math Games",
-      "Mahjong Games",
-      "Sudoku Games",
-      "Puzzle Games",
-      "Intelligence Games",
-      "Classic Games",
-      "Matching Games",
-      "Number Games",
-      "Mobile Games"
-    ],
-    "upvote": "15.6K",
-    "downvote": "5.5K",
-    "defold": true
-  },
-  {
     "url": "/en/g/olly-the-paw",
     "name": "Olly the Paw",
     "author": "7Spot Games",
@@ -969,32 +929,6 @@
     ],
     "upvote": "190.5K",
     "downvote": "44.9K",
-    "defold": true
-  },
-  {
-    "url": "/en/g/pixel-realms",
-    "name": "Pixel Realms",
-    "author": "Yury Grigoryev",
-    "tags": [
-      "Adventure Games",
-      "Mouse Games",
-      "RPG Games",
-      "Management Games",
-      "Simulation Games",
-      "Farm Games",
-      "Idle Games",
-      "Crafting Games",
-      "Cool Games",
-      "New Games",
-      "Video Games",
-      "Keyboard Games",
-      "Retro Games",
-      "Mobile Games",
-      "Pixel Art Games",
-      "PvE Games"
-    ],
-    "upvote": "21.2K",
-    "downvote": "2.9K",
     "defold": true
   },
   {
