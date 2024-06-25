@@ -192,14 +192,18 @@ component Main {
             }
           }/>
 
+        " "
+
         <label>
           <input
             type="checkbox"
             checked={onlyDefold}
             onClick={() { next { onlyDefold: !onlyDefold } }}/>
 
-          "Only show Defold games"
+          " Only show Defold games"
         </label>
+
+        " "
 
         <label>
           <input
@@ -207,13 +211,13 @@ component Main {
             checked={hideTags}
             onClick={() { next { hideTags: !hideTags } }}/>
 
-          "Hide Tags"
+          " Hide Tags"
         </label>
       </div>
 
       <table>
         <tr>
-          <th/>
+          <th>"#"</th>
 
           <SortableTableHeader
             label={"Defold"}
