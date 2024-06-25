@@ -4,7 +4,7 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   const mint = Mint(_enums)
 
   const _normalizeEvent = (event) => {
-    return AM.bo(mint.normalizeEvent(event))
+    return AN.br(mint.normalizeEvent(event))
   }
 
   const _R = mint.createRecord
@@ -205,51 +205,51 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
 
   class DoError extends Error {}
 
-  class AP extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AQ extends _E{constructor(){super();this.length = 0}};class AT extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AS extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BE extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BC extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BB extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BD extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BF extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AZ extends _E{constructor(){super();this.length = 0}};class BG extends _E{constructor(){super();this.length = 0}};class BA extends _E{constructor(){super();this.length = 0}};class AY extends _E{constructor(){super();this.length = 0}};class AG extends _E{constructor(){super();this.length = 0}};class AH extends _E{constructor(){super();this.length = 0}};const B = _R({hostname:["hostname",Decoder.string],protocol:["protocol",Decoder.string],origin:["origin",Decoder.string],search:["search",Decoder.string],path:["path",Decoder.string],hash:["hash",Decoder.string],host:["host",Decoder.string],port:["port",Decoder.string]});const C = _R({});const D = _R({});const E = _R({});const F = _R({});const G = _R({});const H = _R({});const I = _R({});const J = _R({});const K = _R({});const L = _R({});const M = _R({});const N = _R({});const O = _R({});const P = _R({});const Q = _R({});const R = _R({});const S = _R({});const U = _R({});const V = _R({});const T = _R({height:["height",Decoder.number],bottom:["bottom",Decoder.number],width:["width",Decoder.number],right:["right",Decoder.number],left:["left",Decoder.number],top:["top",Decoder.number],x:["x",Decoder.number],y:["y",Decoder.number]});const W = _R({});const X = _R({value:["value",Decoder.string],key:["key",Decoder.string]});const Y = _R({});const Z = _R({});const AA = _R({});const AB = _R({});const AC = _R({caseInsensitive:["caseInsensitive",Decoder.boolean],multiline:["multiline",Decoder.boolean],unicode:["unicode",Decoder.boolean],global:["global",Decoder.boolean],sticky:["sticky",Decoder.boolean]});const AD = _R({submatches:["submatches",Decoder.array(Decoder.string),Encoder.array()],match:["match",Decoder.string],index:["index",Decoder.number]});const AE = _R({name:["name",Decoder.string],author:["author",Decoder.string],upvote:["upvote",Decoder.string],downvote:["downvote",Decoder.string],defold:["defold",Decoder.boolean],tags:["tags",Decoder.array(Decoder.string),Encoder.array()],upvotenum:["upvotenum",Decoder.maybe(Decoder.number),Encoder.maybe()],downvotenum:["downvotenum",Decoder.maybe(Decoder.number),Encoder.maybe()]});const AO=new(class extends _M{ao(ap,aq){return _match(ap,[[_PE(AP,[_PV]),((ar)=>{return new AP(aq(ar))})],[_PE(AQ,[]),(()=>{return new AQ()})]])}ak(as,at){return _o(as._0, at)}});const AR=new(class extends _M{au(av){return ((() => {
+  class AP extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AQ extends _E{constructor(){super();this.length = 0}};class AT extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AS extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BE extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BC extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BB extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BD extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BF extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AZ extends _E{constructor(){super();this.length = 0}};class BG extends _E{constructor(){super();this.length = 0}};class BA extends _E{constructor(){super();this.length = 0}};class AY extends _E{constructor(){super();this.length = 0}};class AG extends _E{constructor(){super();this.length = 0}};class AH extends _E{constructor(){super();this.length = 0}};const B = _R({hostname:["hostname",Decoder.string],protocol:["protocol",Decoder.string],origin:["origin",Decoder.string],search:["search",Decoder.string],path:["path",Decoder.string],hash:["hash",Decoder.string],host:["host",Decoder.string],port:["port",Decoder.string]});const C = _R({});const D = _R({});const E = _R({});const F = _R({});const G = _R({});const H = _R({});const I = _R({});const J = _R({});const K = _R({});const L = _R({});const M = _R({});const N = _R({});const O = _R({});const P = _R({});const Q = _R({});const R = _R({});const S = _R({});const U = _R({});const V = _R({});const T = _R({height:["height",Decoder.number],bottom:["bottom",Decoder.number],width:["width",Decoder.number],right:["right",Decoder.number],left:["left",Decoder.number],top:["top",Decoder.number],x:["x",Decoder.number],y:["y",Decoder.number]});const W = _R({});const X = _R({value:["value",Decoder.string],key:["key",Decoder.string]});const Y = _R({});const Z = _R({});const AA = _R({});const AB = _R({});const AC = _R({caseInsensitive:["caseInsensitive",Decoder.boolean],multiline:["multiline",Decoder.boolean],unicode:["unicode",Decoder.boolean],global:["global",Decoder.boolean],sticky:["sticky",Decoder.boolean]});const AD = _R({submatches:["submatches",Decoder.array(Decoder.string),Encoder.array()],match:["match",Decoder.string],index:["index",Decoder.number]});const AE = _R({name:["name",Decoder.string],author:["author",Decoder.string],upvote:["upvote",Decoder.string],downvote:["downvote",Decoder.string],defold:["defold",Decoder.boolean],tags:["tags",Decoder.array(Decoder.string),Encoder.array()],upvotenum:["upvotenum",Decoder.maybe(Decoder.number),Encoder.maybe()],downvotenum:["downvotenum",Decoder.maybe(Decoder.number),Encoder.maybe()]});const AO=new(class extends _M{ar(as,at){return _match(as,[[_PE(AP,[_PV]),((au)=>{return new AP(at(au))})],[_PE(AQ,[]),(()=>{return new AQ()})]])}an(av,aw){return _o(av._0, aw)}});const AR=new(class extends _M{ax(ay){return ((() => {
       try {
-        return new AS((JSON.parse(av)))
+        return new AS((JSON.parse(ay)))
       } catch (error) {
         return new AT((error.message))
       }
-    })())}});const AU=new(class extends _M{aw(ax){return ((() => {
+    })())}});const AU=new(class extends _M{az(ba){return ((() => {
       if (!this._a) {
         this._a = document.createElement('a')
       }
 
-      this._a.href = ax
+      this._a.href = ba
 
       return new B({hostname:(this._a.hostname || ""),protocol:(this._a.protocol || ""),origin:(this._a.origin || ""),path:(this._a.pathname || ""),search:(this._a.search || ""),hash:(this._a.hash || ""),host:(this._a.host || ""),port:(this._a.port || "")})
-    })())}});const AJ=new(class extends _M{ae(ay,az){return (ay.includes(az))}ba(bb,bc,bd){return (bb.replace(bc, bd))}n(be){return (be.toLowerCase())}});const AV=new(class extends _M{bf(bg,bh){return _match(bg,[[_PE(AS,[_PV]),((bi)=>{return new AS(bh(bi))})],[_PE(AT,[]),(()=>{return bg})]])}bj(bk,bl){return _match(bk,[[_PE(AS,[_PV]),((bm)=>{return bm})],[_PE(AT,[]),(()=>{return bl})]])}});const AW=new(class extends _M{bn(){return (([1e7] + -1e3 + -4e3 + -8e3 + -1e11)
+    })())}});const AL=new(class extends _M{ah(bb,bc){return (bb.includes(bc))}bd(be,bf,bg){return (be.replace(bf, bg))}t(bh){return (bh.toLowerCase())}});const AV=new(class extends _M{bi(bj,bk){return _match(bj,[[_PE(AS,[_PV]),((bl)=>{return new AS(bk(bl))})],[_PE(AT,[]),(()=>{return bj})]])}bm(bn,bo){return _match(bn,[[_PE(AS,[_PV]),((bp)=>{return bp})],[_PE(AT,[]),(()=>{return bo})]])}});const AW=new(class extends _M{bq(){return (([1e7] + -1e3 + -4e3 + -8e3 + -1e11)
       .replace(/[018]/g, c =>
         (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4)
-          .toString(16)))}});const AM=new(class extends _M{bo(bp){return new W({bubbles:(bp.bubbles),cancelable:(bp.cancelable),currentTarget:(bp.currentTarget),defaultPrevented:(bp.defaultPrevented),dataTransfer:(bp.dataTransfer),clipboardData:(bp.clipboardData),eventPhase:(bp.eventPhase),isTrusted:(bp.isTrusted),target:(bp.target),timeStamp:(bp.timeStamp),type:(bp.type),data:(bp.data),altKey:(bp.altKey),charCode:(bp.charCode),ctrlKey:(bp.ctrlKey),key:(bp.key),keyCode:(bp.keyCode),locale:(bp.locale),location:(bp.location),metaKey:(bp.metaKey),repeat:(bp.repeat),shiftKey:(bp.shiftKey),which:(bp.which),button:(bp.button),buttons:(bp.buttons),clientX:(bp.clientX),clientY:(bp.clientY),pageX:(bp.pageX),pageY:(bp.pageY),screenX:(bp.screenX),screenY:(bp.screenY),detail:(bp.detail),deltaMode:(bp.deltaMode),deltaX:(bp.deltaX),deltaY:(bp.deltaY),deltaZ:(bp.deltaZ),animationName:(bp.animationName),pseudoElement:(bp.pseudoElement),propertyName:(bp.propertyName),elapsedTime:(bp.elapsedTime),event:bp})}w(bq){return (bq.event.preventDefault())}});const AK=new(class extends _M{o(br){return ((() => {
-      let value = br.value
+          .toString(16)))}});const AN=new(class extends _M{br(bs){return new W({bubbles:(bs.bubbles),cancelable:(bs.cancelable),currentTarget:(bs.currentTarget),defaultPrevented:(bs.defaultPrevented),dataTransfer:(bs.dataTransfer),clipboardData:(bs.clipboardData),eventPhase:(bs.eventPhase),isTrusted:(bs.isTrusted),target:(bs.target),timeStamp:(bs.timeStamp),type:(bs.type),data:(bs.data),altKey:(bs.altKey),charCode:(bs.charCode),ctrlKey:(bs.ctrlKey),key:(bs.key),keyCode:(bs.keyCode),locale:(bs.locale),location:(bs.location),metaKey:(bs.metaKey),repeat:(bs.repeat),shiftKey:(bs.shiftKey),which:(bs.which),button:(bs.button),buttons:(bs.buttons),clientX:(bs.clientX),clientY:(bs.clientY),pageX:(bs.pageX),pageY:(bs.pageY),screenX:(bs.screenX),screenY:(bs.screenY),detail:(bs.detail),deltaMode:(bs.deltaMode),deltaX:(bs.deltaX),deltaY:(bs.deltaY),deltaZ:(bs.deltaZ),animationName:(bs.animationName),pseudoElement:(bs.pseudoElement),propertyName:(bs.propertyName),elapsedTime:(bs.elapsedTime),event:bs})}ab(bt){return (bt.event.preventDefault())}});const AM=new(class extends _M{u(bu){return ((() => {
+      let value = bu.value
 
       if (typeof value === "string") {
         return value
       } else {
         return ""
       }
-    })())}});const AL=new(class extends _M{bs(bt){return ((() => {
-      if (bt.trim() === '') {
+    })())}});const AJ=new(class extends _M{bv(bw){return ((() => {
+      if (bw.trim() === '') {
         return new AQ()
       }
 
-      let value = Number(bt)
+      let value = Number(bw)
 
       if (Number.isNaN(value)) {
         return new AQ()
       }
 
       return new AP((value))
-    })())}v(bu){return (bu.toString())}});const AX=new(class extends _M{bv(){return new Y({withCredentials:false,method:`GET`,body:(null),headers:[],url:``})}bw(bx){return AX.by(AX.bz(AX.bv(), `GET`), bx)}bz(ca,cb){return _u(ca, {method:cb})}cc(cd,ce = AW.bn()){return (new Promise((resolve, reject) => {
+    })())}o(bx){return (bx.toString())}});const AX=new(class extends _M{by(){return new Y({withCredentials:false,method:`GET`,body:(null),headers:[],url:``})}bz(ca){return AX.cb(AX.cc(AX.by(), `GET`), ca)}cc(cd,ce){return _u(cd, {method:ce})}cf(cg,ch = AW.bq()){return (new Promise((resolve, reject) => {
       if (!this._requests) { this._requests = {} }
 
       let xhr = new XMLHttpRequest()
 
-      this._requests[ce] = xhr
+      this._requests[ch] = xhr
 
-      xhr.withCredentials = cd.withCredentials
+      xhr.withCredentials = cg.withCredentials
       xhr.responseType = "blob"
 
       const getResponseHeaders = () => {
@@ -264,31 +264,31 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
       }
 
       try {
-        xhr.open(cd.method.toUpperCase(), cd.url, true)
+        xhr.open(cg.method.toUpperCase(), cg.url, true)
       } catch (error) {
-        delete this._requests[ce]
+        delete this._requests[ch]
 
-        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new AY(),status:(xhr.status),url:cd.url})))
+        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new AY(),status:(xhr.status),url:cg.url})))
       }
 
-      cd.headers.forEach((item) => {
+      cg.headers.forEach((item) => {
         xhr.setRequestHeader(item.key, item.value)
       })
 
       xhr.addEventListener('error', (event) => {
-        delete this._requests[ce]
+        delete this._requests[ch]
 
-        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new AZ(),status:(xhr.status),url:cd.url})))
+        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new AZ(),status:(xhr.status),url:cg.url})))
       })
 
       xhr.addEventListener('timeout', (event) => {
-        delete this._requests[ce]
+        delete this._requests[ch]
 
-        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new BA(),status:(xhr.status),url:cd.url})))
+        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new BA(),status:(xhr.status),url:cg.url})))
       })
 
       xhr.addEventListener('load', async (event) => {
-        delete this._requests[ce]
+        delete this._requests[ch]
 
         let contentType = xhr.getResponseHeader("Content-Type");
         let responseText = await xhr.response.text();
@@ -329,7 +329,7 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
         }
 
         if (!body) {
-          const parts = AU.aw(cd.url).path.split('/');
+          const parts = AU.az(cg.url).path.split('/');
           body = new BF((new File([xhr.response], parts[parts.length - 1], { type: contentType })));
         }
 
@@ -337,17 +337,17 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
       })
 
       xhr.addEventListener('abort', (event) => {
-        delete this._requests[ce]
+        delete this._requests[ch]
 
-        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new BG(),status:(xhr.status),url:cd.url})))
+        resolve(new AT(new AA({headers:(getResponseHeaders()),type:new BG(),status:(xhr.status),url:cg.url})))
       })
 
-      xhr.send(cd.body)
-    }))}by(cf,cg){return _u(cf, {url:cg})}});const AN=new(class extends _M{ch(ci,cj){return (()=>{const _0 = [];const _1 = ci;let _i = -1;for(let ck of _1){_i++;_0.push(cj(ck))};return _0})()}aa(cl,cm){return (()=>{const _0 = [];const _1 = cl;let _i = -1;for(let cn of _1){_i++;const co = _i;_0.push(cm(cn, co))};return _0})()}ac(cp,cq){return (cp.filter(cq))}ab(cr,cs){return ([...cr].sort(cs))}});class AF extends _C{constructor(props){super(props);this._d({a:[null,null],c:[null,null],b:[null,null],d:[null,null]})}render(){return _h("th", {"onClick":(event => (this.d)(_normalizeEvent(event))),className:`sortable`}, [this.a,(_compare(this.a, this.c) ? _h("span", {className:`sort-arrow`}, [_match(this.b,[[_PE(AG,[]),(()=>{return `▲`})],[_PE(AH,[]),(()=>{return `▼`})]])]) : null)])}};;class A extends _C{constructor(props){super(props);this.state = new Record({m:``,q:false,r:false,h:`Name`,g:new AG()})}get y(){return AN.aa(AN.ab(AN.ac(AI.ad, ((af)=>{const ag=AJ.ae(AJ.n(af.name), this.m);const ah=AJ.ae(AJ.n(af.author), this.m);return (ag || ah) && (!this.q || this.q && af.defold)})), ((aj, ai)=>{return _match(this.h,[[`Defold`,(()=>{return this.j(ai.defold, aj.defold)})],[`Name`,(()=>{return this.j(aj.name, ai.name)})],[`Author`,(()=>{return this.j(aj.author, ai.author)})],[`Upvotes`,(()=>{return this.j(AO.ak(aj.upvotenum, 0), AO.ak(ai.upvotenum, 0))})],[`Downvotes`,(()=>{return this.j(AO.ak(aj.downvotenum, 0), AO.ak(ai.downvotenum, 0))})],[null,(()=>{return 0})]])})), ((am, al)=>{return [al, am]}))}get m(){return this.state.m;}get q(){return this.state.q;}get r(){return this.state.r;}get h(){return this.state.h;}get g(){return this.state.g;}get an(){return AI.ad;}componentWillUnmount(){AI._unsubscribe(this)}componentDidMount(){AI._subscribe(this);return AI.z()}e(f){const i=(_compare(this.h, f) ? (_compare(this.g, new AG()) ? new AH() : new AG()) : new AG());return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({h:f,g:i})), _resolve)
-}))}j(k,l){return (k < l && _compare(this.g, new AG()) ? -1 : (k < l && _compare(this.g, new AH()) ? 1 : (k > l && _compare(this.g, new AG()) ? 1 : (k > l && _compare(this.g, new AH()) ? -1 : 0))))}render(){return _h("div", {className:`a`}, [_h("h1", {}, [`Poki Games - Showing`]),_h("div", {"id":`options`}, [_h("input", {"id":`search`,"placeholder":`search name or author`,"onInput":(event => (((p)=>{return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({m:AJ.n(AK.o(p.target))})), _resolve)
-}))}))(_normalizeEvent(event)))}),_h("label", {}, [_h("input", {"type":`checkbox`,"checked":this.q,"onClick":(event => ((()=>{return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({q:!this.q})), _resolve)
-}))}))(_normalizeEvent(event)))}),`Only show Defold games`]),_h("label", {}, [_h("input", {"type":`checkbox`,"checked":this.r,"onClick":(event => ((()=>{return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({r:!this.r})), _resolve)
-}))}))(_normalizeEvent(event)))}),`Hide Tags`])]),_h("table", {}, [_h("tr", {}, [_h("th", {}),_h(AF, {a:`Defold`,c:this.h,b:this.g,d:(()=>{return this.e(`Defold`)})}),_h(AF, {a:`Name`,c:this.h,b:this.g,d:(()=>{return this.e(`Name`)})}),_h(AF, {a:`Author`,c:this.h,b:this.g,d:(()=>{return this.e(`Author`)})}),_h(AF, {a:`Upvotes`,c:this.h,b:this.g,d:(()=>{return this.e(`Upvotes`)})}),_h(AF, {a:`Downvotes`,c:this.h,b:this.g,d:(()=>{return this.e(`Downvotes`)})}),(!this.r ? _h("th", {}, [`Tags`]) : null)]),(()=>{const _0 = [];const _1 = this.y;let _i = -1;for(let s of _1){_i++;_0.push((()=>{const [t,u] = s;return _h("tr", {}, [_h("td", {}, [AL.v(t + 1)]),_h("td", {}, [_h("input", {"type":`checkbox`,"checked":u.defold,"onClick":(event => (AM.w)(_normalizeEvent(event)))})]),_h("td", {}, [_h("a", {"href":`https://poki.com{url}`,"target":`_blank`}, [u.name])]),_h("td", {}, [u.author]),_h("td", {}, [u.upvote]),_h("td", {}, [u.downvote]),(!this.r ? _h("td", {}, [_h("ul", {}, [(()=>{const _0 = [];const _1 = u.tags;let _i = -1;for(let x of _1){_i++;_0.push(_h("li", {}, [x]))};return _0})()])]) : null)])})())};return _0})()])])}};;const AI=new(class extends _S{constructor(){super();this.state={ad:[]};this._d({cx:(()=>{return `/assets/gameinfos_6e90f13687ea9495ee53ed503af38e6e.json`})})}get ad(){return this.state.ad;}ct(cu){return (AJ.ae(cu, `K`) ? AO.ao(AL.bs(AJ.ba(cu, `K`, ``)), ((cv)=>{return cv * 1000})) : (AJ.ae(cu, `M`) ? AO.ao(AL.bs(AJ.ba(cu, `M`, ``)), ((cw)=>{return cw * 1000000})) : AL.bs(cu)))}async z(){const cy=await AX.cc(AX.bw(this.cx));const dc=AN.ch(AV.bj(AV.bf(AR.au(AV.bj(AV.bf(cy, ((cz)=>{return cz.bodyString})), ``)), ((da)=>{return AV.bj(Decoder.array(((_)=>AE.decode(_)))(da), [])})), []), ((db)=>{return _u(db, {upvotenum:AI.ct(db.upvote),downvotenum:AI.ct(db.downvote)})}));return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({ad:dc})), _resolve)
+      xhr.send(cg.body)
+    }))}cb(ci,cj){return _u(ci, {url:cj})}});const AK=new(class extends _M{ck(cl,cm){return (()=>{const _0 = [];const _1 = cl;let _i = -1;for(let cn of _1){_i++;_0.push(cm(cn))};return _0})()}ae(co,cp){return (()=>{const _0 = [];const _1 = co;let _i = -1;for(let cq of _1){_i++;const cr = _i;_0.push(cp(cq, cr))};return _0})()}ag(cs,ct){return (cs.filter(ct))}p(cu){return (cu.length)}af(cv,cw){return ([...cv].sort(cw))}});class AF extends _C{constructor(props){super(props);this._d({a:[null,null],c:[null,null],b:[null,null],d:[null,null]})}render(){return _h("th", {"onClick":(event => (this.d)(_normalizeEvent(event))),className:`sortable`}, [this.a,(_compare(this.a, this.c) ? _h("span", {className:`sort-arrow`}, [_match(this.b,[[_PE(AG,[]),(()=>{return `▲`})],[_PE(AH,[]),(()=>{return `▼`})]])]) : null)])}};;class A extends _C{constructor(props){super(props);this.state = new Record({s:``,w:false,x:false,h:`Name`,g:new AG()})}get q(){return AK.ae(AK.af(AK.ag(AI.r, ((ai)=>{const aj=AL.ah(AL.t(ai.name), this.s);const ak=AL.ah(AL.t(ai.author), this.s);return (aj || ak) && (!this.w || this.w && ai.defold)})), ((am, al)=>{return _match(this.h,[[`Defold`,(()=>{return this.j(al.defold, am.defold)})],[`Name`,(()=>{return this.j(am.name, al.name)})],[`Author`,(()=>{return this.j(am.author, al.author)})],[`Upvotes`,(()=>{return this.j(AO.an(am.upvotenum, 0), AO.an(al.upvotenum, 0))})],[`Downvotes`,(()=>{return this.j(AO.an(am.downvotenum, 0), AO.an(al.downvotenum, 0))})],[null,(()=>{return 0})]])})), ((ao, ap)=>{return [ao, ap]}))}get s(){return this.state.s;}get w(){return this.state.w;}get x(){return this.state.x;}get h(){return this.state.h;}get g(){return this.state.g;}get aq(){return AI.r;}componentWillUnmount(){AI._unsubscribe(this)}componentDidMount(){AI._subscribe(this);return AI.ad()}e(f){const i=(_compare(this.h, f) ? (_compare(this.g, new AG()) ? new AH() : new AG()) : new AG());return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({h:f,g:i})), _resolve)
+}))}j(k,l){return (k < l && _compare(this.g, new AG()) ? -1 : (k < l && _compare(this.g, new AH()) ? 1 : (k > l && _compare(this.g, new AG()) ? 1 : (k > l && _compare(this.g, new AH()) ? -1 : 0))))}m(n){return AJ.o(AK.p(n))}render(){return _h("div", {className:`a`}, [_h("h1", {}, [`Poki Games - Showing `,this.m(this.q),` of `,this.m(AI.r)]),_h("div", {"id":`options`}, [_h("input", {"id":`search`,"placeholder":`search name or author`,"onInput":(event => (((v)=>{return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({s:AL.t(AM.u(v.target))})), _resolve)
+}))}))(_normalizeEvent(event)))}),_h("label", {}, [_h("input", {"type":`checkbox`,"checked":this.w,"onClick":(event => ((()=>{return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({w:!this.w})), _resolve)
+}))}))(_normalizeEvent(event)))}),`Only show Defold games`]),_h("label", {}, [_h("input", {"type":`checkbox`,"checked":this.x,"onClick":(event => ((()=>{return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({x:!this.x})), _resolve)
+}))}))(_normalizeEvent(event)))}),`Hide Tags`])]),_h("table", {}, [_h("tr", {}, [_h("th", {}),_h(AF, {a:`Defold`,c:this.h,b:this.g,d:(()=>{return this.e(`Defold`)})}),_h(AF, {a:`Name`,c:this.h,b:this.g,d:(()=>{return this.e(`Name`)})}),_h(AF, {a:`Author`,c:this.h,b:this.g,d:(()=>{return this.e(`Author`)})}),_h(AF, {a:`Upvotes`,c:this.h,b:this.g,d:(()=>{return this.e(`Upvotes`)})}),_h(AF, {a:`Downvotes`,c:this.h,b:this.g,d:(()=>{return this.e(`Downvotes`)})}),(!this.x ? _h("th", {}, [`Tags`]) : null)]),(()=>{const _0 = [];const _1 = this.q;let _i = -1;for(let y of _1){_i++;_0.push((()=>{const [z,aa] = y;return _h("tr", {}, [_h("td", {}, [AJ.o(aa + 1)]),_h("td", {}, [_h("input", {"type":`checkbox`,"checked":z.defold,"onClick":(event => (AN.ab)(_normalizeEvent(event)))})]),_h("td", {}, [_h("a", {"href":`https://poki.com{url}`,"target":`_blank`}, [z.name])]),_h("td", {}, [z.author]),_h("td", {}, [z.upvote]),_h("td", {}, [z.downvote]),(!this.x ? _h("td", {}, [_h("ul", {}, [(()=>{const _0 = [];const _1 = z.tags;let _i = -1;for(let ac of _1){_i++;_0.push(_h("li", {}, [ac]))};return _0})()])]) : null)])})())};return _0})()])])}};;const AI=new(class extends _S{constructor(){super();this.state={r:[]};this._d({db:(()=>{return `/assets/gameinfos_6e90f13687ea9495ee53ed503af38e6e.json`})})}get r(){return this.state.r;}cx(cy){return (AL.ah(cy, `K`) ? AO.ar(AJ.bv(AL.bd(cy, `K`, ``)), ((cz)=>{return cz * 1000})) : (AL.ah(cy, `M`) ? AO.ar(AJ.bv(AL.bd(cy, `M`, ``)), ((da)=>{return da * 1000000})) : AJ.bv(cy)))}async ad(){const dc=await AX.cf(AX.bz(this.db));const dg=AK.ck(AV.bm(AV.bi(AR.ax(AV.bm(AV.bi(dc, ((dd)=>{return dd.bodyString})), ``)), ((de)=>{return AV.bm(Decoder.array(((_)=>AE.decode(_)))(de), [])})), []), ((df)=>{return _u(df, {upvotenum:AI.cx(df.upvote),downvotenum:AI.cx(df.downvote)})}));return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({r:dg})), _resolve)
 }))}});_insertStyles(`
 .a h1 {
   margin-top: 0;
