@@ -129,6 +129,12 @@ component Main {
     }
   }
 
+  fun count (arr : Array(a)) {
+    arr
+    |> Array.size
+    |> Number.toString
+  }
+
   get filteredGames {
     Games.data
     |> Array.select(
@@ -157,14 +163,19 @@ component Main {
         }
       })
     |> Array.mapWithIndex(
-      (g : Game, i : Number) {
-        {i, g}
+      (game : Game, index : Number) {
+        {game, index}
       })
   }
 
   fun render : Html {
     <div::app>
-      <h1>"Poki Games - Showing"</h1>
+      <h1>
+        "Poki Games - Showing "
+        <{ count(filteredGames) }>
+        " of "
+        <{ count(Games.data) }>
+      </h1>
 
       <div id="options">
         <input
@@ -240,7 +251,7 @@ component Main {
         </tr>
 
         for item of filteredGames {
-          let {index, game} =
+          let {game, index} =
             item
 
           <tr>
