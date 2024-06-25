@@ -1,4 +1,5 @@
 record Game {
+  url : String,
   name : String,
   author : String,
   upvote : String,
@@ -272,7 +273,7 @@ component Main {
 
             <td>
               <a
-                href="https://poki.com{url}"
+                href="https://poki.com#{game.url}"
                 target="_blank">
 
                 <{ game.name }>
