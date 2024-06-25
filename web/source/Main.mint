@@ -9,6 +9,11 @@ record Game {
   downvotenum : Maybe(Number)
 }
 
+enum SortDirection {
+  Asc
+  Desc
+}
+
 store Games {
   const GAMEINFOS_PATH = @asset(../assets/gameinfos.json)
 
@@ -49,31 +54,32 @@ store Games {
           }
         })
 
-    Debug.log(data)
-
     next { data: data }
   }
 }
 
 component SortableTableHeader {
-  property label : String = ""
-  property sort : String = "name"
-  property sortDir : String = "asc"
+  property label : String
+  property sort : String
+  property sortDir : SortDirection
   property onClick : Function(Promise(Void))
 
   fun render : Html {
-    <th class="sortable" onClick={onClick}>
+    <th
+      class="sortable"
+      onClick={onClick}>
+
       <{ label }>
 
-      <span class="sort">
-        if label == sort {
+      if label == sort {
+        <span class="sort-arrow">
           case sortDir {
-            "asc" => "▲"
-            "desc" => "▼"
-            => ""
+            SortDirection::Asc => "▲"
+            SortDirection::Desc => "▼"
           }
-        }
-      </span>
+        </span>
+      }
+
     </th>
   }
 }
@@ -84,22 +90,22 @@ component Main {
   state onlyDefold = false
   state hideTags = false
   state sort = "Name"
-  state sortDir = "asc"
+  state sortDir = SortDirection::Asc
 
   fun componentDidMount {
     Games.load()
   }
 
-  fun sortBy (col : String) {
+  fun setSort (col : String) {
     let sortDir =
       if sort == col {
-        if sortDir == "asc" {
-          "desc"
+        if sortDir == SortDirection::Asc {
+          SortDirection::Desc
         } else {
-          "asc"
+          SortDirection::Asc
         }
       } else {
-        "asc"
+        SortDirection::Asc
       }
 
     next
@@ -109,14 +115,14 @@ component Main {
       }
   }
 
-  fun sortVal (val1 : a, val2 : a) : Number {
-    if sortDir == "asc" && val1 < val2 {
+  fun compare (val1 : a, val2 : a) : Number {
+    if val1 < val2 && sortDir == SortDirection::Asc {
       -1
-    } else if sortDir == "asc" && val2 < val1 {
+    } else if val1 < val2 && sortDir == SortDirection::Desc {
       1
-    } else if sortDir == "desc" && val1 < val2 {
+    } else if val1 > val2 && sortDir == SortDirection::Asc {
       1
-    } else if sortDir == "desc" && val2 < val1 {
+    } else if val1 > val2 && sortDir == SortDirection::Desc {
       -1
     } else {
       0
@@ -127,16 +133,26 @@ component Main {
     Games.data
     |> Array.select(
       (g : Game) {
-        (String.contains(g.name, search) || String.contains(g.author, search)) && (!onlyDefold || onlyDefold && g.defold)
+        let containsName =
+          g.name
+          |> String.toLowerCase
+          |> String.contains(search)
+
+        let containsAuthor =
+          g.author
+          |> String.toLowerCase
+          |> String.contains(search)
+
+        (containsName || containsAuthor) && (!onlyDefold || onlyDefold && g.defold)
       })
     |> Array.sort(
       (a : Game, b : Game) : Number {
         case sort {
-          "Defold" => sortVal(b.defold, a.defold)
-          "Name" => sortVal(a.name, b.name)
-          "Author" => sortVal(a.author, b.author)
-          "Upvotes" => sortVal(Maybe.withDefault(a.upvotenum, 0), Maybe.withDefault(b.upvotenum, 0))
-          "Downvotes" => sortVal(Maybe.withDefault(a.downvotenum, 0), Maybe.withDefault(b.downvotenum, 0))
+          "Defold" => compare(b.defold, a.defold)
+          "Name" => compare(a.name, b.name)
+          "Author" => compare(a.author, b.author)
+          "Upvotes" => compare(Maybe.withDefault(a.upvotenum, 0), Maybe.withDefault(b.upvotenum, 0))
+          "Downvotes" => compare(Maybe.withDefault(a.downvotenum, 0), Maybe.withDefault(b.downvotenum, 0))
           => 0
         }
       })
@@ -154,7 +170,16 @@ component Main {
         <input
           id="search"
           placeholder="search name or author"
-          onInput={(e : Html.Event) { next { search: Dom.getValue(e.target) } }}/>
+          onInput={
+            (e : Html.Event) {
+              next
+                {
+                  search:
+                    Dom.getValue(e.target)
+                    |> String.toLowerCase
+                }
+            }
+          }/>
 
         <label>
           <input
@@ -183,31 +208,31 @@ component Main {
             label={"Defold"}
             sort={sort}
             sortDir={sortDir}
-            onClick={() { sortBy("Defold") }}/>
+            onClick={() { setSort("Defold") }}/>
 
           <SortableTableHeader
             label={"Name"}
             sort={sort}
             sortDir={sortDir}
-            onClick={() { sortBy("Name") }}/>
+            onClick={() { setSort("Name") }}/>
 
           <SortableTableHeader
             label={"Author"}
             sort={sort}
             sortDir={sortDir}
-            onClick={() { sortBy("Author") }}/>
+            onClick={() { setSort("Author") }}/>
 
           <SortableTableHeader
             label={"Upvotes"}
             sort={sort}
             sortDir={sortDir}
-            onClick={() { sortBy("Upvotes") }}/>
+            onClick={() { setSort("Upvotes") }}/>
 
           <SortableTableHeader
             label={"Downvotes"}
             sort={sort}
             sortDir={sortDir}
-            onClick={() { sortBy("Downvotes") }}/>
+            onClick={() { setSort("Downvotes") }}/>
 
           if !hideTags {
             <th>"Tags"</th>
@@ -288,6 +313,12 @@ component Main {
       cursor: pointer;
     }
 
+    .sort-arrow {
+      font-size: 12px;
+      margin-left: 4px;
+      display: inline-block;
+    }
+
     td {
       background: #f1f1f1;
       text-align: left;
@@ -316,6 +347,7 @@ component Main {
 
     #options label {
       margin-left: 20px;
+      white-space: nowrap;
     }
 
     #search {
@@ -326,12 +358,6 @@ component Main {
       width: 300px;
       padding: 8px;
       font-size: 20px;
-    }
-
-    .sort {
-      font-size: 12px;
-      margin-left: 4px;
-      display: inline-block;
     }
   }
 }

@@ -1,7 +1,20 @@
+// add index to loop
+
 for item, i of items {
 
 }
 
+// allow numbers in html interpolation
+
 <div>
-  <{ number }>
+  <{ number }> 
 </div>
+
+// this is invalid syntax
+if (cond1 && cond2) || (cond2 && cond3) {
+
+}
+// this is valid syntax, but outer parens are stripped when formatting
+if ((cond1 && cond2) || (cond2 && cond3)) {
+
+}
