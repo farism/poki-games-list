@@ -1,14 +1,9 @@
 {
-  "name": "web",
+  "name": "poki-games-list",
   "application": {
     "head": "assets/head.html",
-    "title": "web",
+    "title": "poki-games-list",
     "icon": "assets/favicon.png"
-  },
-  "external": {
-    "stylesheets": [
-      "assets/style.css"
-    ]
   },
   "source-directories": [
     "source"
